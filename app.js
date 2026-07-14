@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     /* ─── LANGUAGE SWITCHER ─── */
-    const langSelect = document.getElementById('langSelect');
+    const langSelect = document.getElementById('lang-switcher');
     
     // Set initial language based on browser or default to EN
     let currentLang = localStorage.getItem('lang') || 'en';
@@ -142,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTranslations(currentLang);
 
     /* ─── DARK MODE TOGGLE ─── */
-    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    const themeToggleBtn = document.getElementById('theme-toggle');
     let isDark = localStorage.getItem('theme') === 'dark';
 
     function setTheme(dark) {
@@ -167,12 +167,12 @@ document.addEventListener('DOMContentLoaded', () => {
     setTheme(isDark);
 
     /* ─── MODAL LOGIC ─── */
-    const modal = document.getElementById('serviceModal');
-    const modalClose = document.getElementById('modalClose');
+    const modal = document.getElementById('service-modal');
+    const modalClose = document.querySelector('.modal-close');
     const modalBackdrop = document.querySelector('.modal-backdrop');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalDesc = document.getElementById('modalDesc');
-    const modalImg = document.getElementById('modalImg');
+    const modalTitle = document.getElementById('modal-title');
+    const modalDesc = document.getElementById('modal-desc');
+    const modalImg = document.getElementById('modal-img');
 
     function openModal(serviceKey, imgSrc) {
         // Get translated title and desc based on serviceKey (e.g. srv_transfer)
@@ -187,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const waNumber = '905330364966';
         const serviceName = encodeURIComponent(modalTitle.textContent);
         const waMessage = encodeURIComponent(`Hello, I would like to get information about ${modalTitle.textContent}.`);
-        document.getElementById('modalWaBtn').href = `https://wa.me/${waNumber}?text=${waMessage}`;
+        document.getElementById('modal-wa').href = `https://wa.me/${waNumber}?text=${waMessage}`;
         
         // Make body unscrollable
         document.body.style.overflow = 'hidden';
@@ -203,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.card').forEach(card => {
         card.addEventListener('click', (e) => {
             e.preventDefault();
-            const serviceKey = card.getAttribute('data-modal');
+            const serviceKey = card.getAttribute('data-service');
             const imgSrc = card.querySelector('img').src;
             openModal(serviceKey, imgSrc);
         });
