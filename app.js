@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const translations = {
         'tr': {
             'nav_contact': 'İLETİŞİM',
+            'navJournal': 'DERGİ',
             'brand_desc': 'Bodrum\'un En Özel Kapılarını Açan Anahtar',
             'label_services': 'ÖZEL HİZMETLERİMİZ',
             'srv_transfer': 'VIP TRANSFER',
@@ -50,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'en': {
             'nav_contact': 'CONTACT',
+            'navJournal': 'JOURNAL',
             'brand_desc': 'The Key to Bodrum\'s Most Exclusive Doors',
             'label_services': 'OUR EXCLUSIVE SERVICES',
             'srv_transfer': 'VIP TRANSFER',
@@ -96,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         'ru': {
             'nav_contact': 'КОНТАКТЫ',
+            'navJournal': 'ЖУРНАЛ',
             'brand_desc': 'Ключ к самым эксклюзивным дверям Бодрума',
             'label_services': 'НАШИ ЭКСКЛЮЗИВНЫЕ УСЛУГИ',
             'srv_transfer': 'VIP-ТРАНСФЕР',
