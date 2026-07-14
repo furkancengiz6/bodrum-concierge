@@ -3,6 +3,11 @@ document.addEventListener('DOMContentLoaded', () => {
     /* ─── TRANSLATIONS ─── */
     const translations = {
         'tr': {
+            'catGastronomy': 'GASTRONOMİ',
+            'catLifestyle': 'YAŞAM STİLİ',
+            'catSea': 'YATÇILIK',
+            'catWellness': 'SAĞLIK & WELLNESS',
+            'catRealEstate': 'YATIRIM & EMLAK',
             'nav_contact': 'İLETİŞİM',
             'navJournal': 'DERGİ',
             'brand_desc': 'Bodrum\'un En Özel Kapılarını Açan Anahtar',
@@ -41,13 +46,19 @@ document.addEventListener('DOMContentLoaded', () => {
             'fab_text': 'MESAJ GÖNDER',
             'label_journal': 'THE LIFESTYLE JOURNAL',
             'journal_1_title': 'Yalıkavak Marina: Lüksün Yeni Başkenti',
-            'journal_1_desc': 'Dünyaca ünlü markalar, seçkin restoranlar ve mega yatlarla dolu Yalıkavak Marina\'da bir gün.',
-            'journal_2_title': 'Ege\'nin Mavi Sularında Geleneksel Lüks',
-            'journal_2_desc': 'Bodrum\'un gizli koylarını özel şefli ahşap guletlerle keşfetmenin ayrıcalığı.',
+            'journal_1_desc': 'Dünyaca ünlü markalar, restoranlar ve mega yatlarla dolu bir gün.',
+            'journal_2_title': 'Ege Sularında Geleneksel Lüks',
+            'journal_2_desc': 'Özel şefli ahşap guletlerle gizli koyları keşfetme ayrıcalığı.',
             'journal_3_title': 'Michelin Yıldızlı Bodrum Geceleri',
-            'journal_3_desc': 'Mandarin Oriental ve Bodrum\'un en gözde restoranlarında unutulmaz fine-dining deneyimleri.',
-            'journal_4_title': 'Bodrum\'a Helikopter ile İniş',
-            'journal_4_desc': 'Trafiksiz, hızlı ve prestijli: Özel helikopter transferleri ve gökyüzünden Bodrum manzaraları.'
+            'journal_3_desc': 'Mandarin Oriental ve Bodrum\'un en popüler restoranlarında fine-dining.',
+            'journal_4_title': 'Bodrum\'a Helikopterle İniş',
+            'journal_4_desc': 'Trafiksiz, hızlı ve prestijli: Özel helikopter transferleri.',
+            'journal_5_title': 'Yeni Lüks Formatı: Arınma ve Wellness',
+            'journal_5_desc': 'Villalarda ses terapisi ve ultra lüks detoks programları.',
+            'journal_6_title': 'Bohem Şıklık: Ayrıcalıklı Beach Clublar',
+            'journal_6_desc': 'Gün batımı ritüelleri ve Bodrum\'un en lüks plaj kulüpleri.',
+            'journal_7_title': 'Eko-Lüks ve Dört Mevsim Yatırım',
+            'journal_7_desc': 'Bodrum emlak trendleri. Yeni nesil lüks eko-villalar.'
         },
         'en': {
             'nav_contact': 'CONTACT',
@@ -97,6 +108,11 @@ document.addEventListener('DOMContentLoaded', () => {
             'journal_4_desc': 'Traffic-free, fast, and prestigious: Private helicopter transfers and sky views of Bodrum.'
         },
         'ru': {
+            'catGastronomy': 'ГАСТРОНОМИЯ',
+            'catLifestyle': 'СТИЛЬ ЖИЗНИ',
+            'catSea': 'ЯХТИНГ',
+            'catWellness': 'ЗДОРОВЬЕ',
+            'catRealEstate': 'ИНВЕСТИЦИИ',
             'nav_contact': 'КОНТАКТЫ',
             'navJournal': 'ЖУРНАЛ',
             'brand_desc': 'Ключ к самым эксклюзивным дверям Бодрума',
@@ -141,7 +157,13 @@ document.addEventListener('DOMContentLoaded', () => {
             'journal_3_title': 'Бодрумские Ночи со Звездами Мишлен',
             'journal_3_desc': 'Незабываемые гастрономические впечатления в Mandarin Oriental и самых популярных ресторанах Бодрума.',
             'journal_4_title': 'Прибытие в Бодрум на Вертолете',
-            'journal_4_desc': 'Без пробок, быстро и престижно: Частные вертолетные трансферы и виды Бодрума с неба.'
+            'journal_4_desc': 'Без пробок, быстро и престижно: Частные вертолетные трансферы и виды Бодрума с неба.',
+            'journal_5_title': 'Новый Формат Роскоши и Глубокого Очищения',
+            'journal_5_desc': 'Звукотерапия, ретриты на виллах и эксклюзивные программы оздоровления.',
+            'journal_6_title': 'Богемный Шик: Эксклюзивные Пляжные Клубы',
+            'journal_6_desc': 'Ритуалы на закате, высокая мода и фестивали в лучших пляжных клубах.',
+            'journal_7_title': 'Инвестиции в Эко-Роскошь и Круглогодичную Жизнь',
+            'journal_7_desc': 'Тренды недвижимости в Бодруме. Ультра-роскошные эко-виллы.'
         }
     };
 
