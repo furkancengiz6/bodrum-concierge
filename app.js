@@ -37,7 +37,16 @@ document.addEventListener('DOMContentLoaded', () => {
             'footer_tagline': 'BODRUM ELITE CONCIERGE. TÜM HAKLARI SAKLIDIR.',
             'modal_wa_btn': 'WhatsApp ile İletişime Geç',
             'modal_tg_btn': 'Telegram ile İletişime Geç',
-            'fab_text': 'MESAJ GÖNDER'
+            'fab_text': 'MESAJ GÖNDER',
+            'label_journal': 'THE LIFESTYLE JOURNAL',
+            'journal_1_title': 'Yalıkavak Marina: Lüksün Yeni Başkenti',
+            'journal_1_desc': 'Dünyaca ünlü markalar, seçkin restoranlar ve mega yatlarla dolu Yalıkavak Marina\'da bir gün.',
+            'journal_2_title': 'Ege\'nin Mavi Sularında Geleneksel Lüks',
+            'journal_2_desc': 'Bodrum\'un gizli koylarını özel şefli ahşap guletlerle keşfetmenin ayrıcalığı.',
+            'journal_3_title': 'Michelin Yıldızlı Bodrum Geceleri',
+            'journal_3_desc': 'Mandarin Oriental ve Bodrum\'un en gözde restoranlarında unutulmaz fine-dining deneyimleri.',
+            'journal_4_title': 'Bodrum\'a Helikopter ile İniş',
+            'journal_4_desc': 'Trafiksiz, hızlı ve prestijli: Özel helikopter transferleri ve gökyüzünden Bodrum manzaraları.'
         },
         'en': {
             'nav_contact': 'CONTACT',
@@ -74,7 +83,16 @@ document.addEventListener('DOMContentLoaded', () => {
             'footer_tagline': 'BODRUM ELITE CONCIERGE. ALL RIGHTS RESERVED.',
             'modal_wa_btn': 'Contact via WhatsApp',
             'modal_tg_btn': 'Contact via Telegram',
-            'fab_text': 'SEND MESSAGE'
+            'fab_text': 'SEND MESSAGE',
+            'label_journal': 'THE LIFESTYLE JOURNAL',
+            'journal_1_title': 'Yalıkavak Marina: The New Capital of Luxury',
+            'journal_1_desc': 'A day at Yalıkavak Marina, filled with world-famous brands, exclusive restaurants, and mega yachts.',
+            'journal_2_title': 'Traditional Luxury in the Aegean Waters',
+            'journal_2_desc': 'The privilege of exploring Bodrum\'s hidden bays with private chef-catered wooden gulets.',
+            'journal_3_title': 'Michelin-Starred Bodrum Nights',
+            'journal_3_desc': 'Unforgettable fine-dining experiences at Mandarin Oriental and Bodrum\'s most popular restaurants.',
+            'journal_4_title': 'Landing in Bodrum by Helicopter',
+            'journal_4_desc': 'Traffic-free, fast, and prestigious: Private helicopter transfers and sky views of Bodrum.'
         },
         'ru': {
             'nav_contact': 'КОНТАКТЫ',
@@ -111,7 +129,16 @@ document.addEventListener('DOMContentLoaded', () => {
             'footer_tagline': 'BODRUM ELITE CONCIERGE. ВСЕ ПРАВА ЗАЩИЩЕНЫ.',
             'modal_wa_btn': 'Связаться через WhatsApp',
             'modal_tg_btn': 'Связаться через Telegram',
-            'fab_text': 'ОТПРАВИТЬ СООБЩЕНИЕ'
+            'fab_text': 'ОТПРАВИТЬ СООБЩЕНИЕ',
+            'label_journal': 'ЖУРНАЛ О СТИЛЕ ЖИЗНИ',
+            'journal_1_title': 'Ялыкавак Марина: Новая Столица Роскоши',
+            'journal_1_desc': 'День в Yalıkavak Marina, наполненный всемирно известными брендами, эксклюзивными ресторанами и мега-яхтами.',
+            'journal_2_title': 'Традиционная Роскошь в Эгейских Водах',
+            'journal_2_desc': 'Привилегия исследовать скрытые бухты Бодрума на деревянных гулетах с личным поваром.',
+            'journal_3_title': 'Бодрумские Ночи со Звездами Мишлен',
+            'journal_3_desc': 'Незабываемые гастрономические впечатления в Mandarin Oriental и самых популярных ресторанах Бодрума.',
+            'journal_4_title': 'Прибытие в Бодрум на Вертолете',
+            'journal_4_desc': 'Без пробок, быстро и престижно: Частные вертолетные трансферы и виды Бодрума с неба.'
         }
     };
 
@@ -143,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /* ─── DARK MODE TOGGLE ─── */
     const themeToggleBtn = document.getElementById('theme-toggle');
-    let isDark = localStorage.getItem('theme') === 'dark';
+    let isDark = localStorage.getItem('theme') !== 'light'; // Default to dark
 
     function setTheme(dark) {
         if (dark) {
@@ -200,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     }
 
-    document.querySelectorAll('.card').forEach(card => {
+    document.querySelectorAll('.card, .journal-card').forEach(card => {
         card.addEventListener('click', (e) => {
             e.preventDefault();
             const serviceKey = card.getAttribute('data-service');
