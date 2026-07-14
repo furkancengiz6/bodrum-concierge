@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Bodrum Elite | Эксклюзивный Консьерж Сервис в Бодруме</title>
+    <title data-i18n="pageTitle">Bodrum Elite | Эксклюзивный Консьерж Сервис в Бодруме</title>
     <meta name="description" content="Премиальный консьерж-сервис в Бодруме для русскоязычных клиентов. Трансферы, виллы, яхты, рестораны и частная авиация.">
     <meta name="theme-color" content="#F5F0EB">
-    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="icon" href="assets/favicon.webp" type="image/webp">
+
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="Bodrum Elite Concierge">
+    <meta property="og:description" content="Эксклюзивный доступ к виллам, яхтам и незабываемым моментам на полуострове Бодрум.">
+    <meta property="og:image" content="https://bodrum-elite-concierge.surge.sh/assets/hero.webp">
+    <meta property="og:url" content="https://bodrum-elite-concierge.surge.sh">
+    <meta property="og:type" content="website">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,15 +28,30 @@
         <div class="container header-inner">
             <div class="brand">
                 <h1 class="brand-name">BODRUM<span class="accent">ELITE</span></h1>
-                <p class="brand-sub">Консьерж Сервис</p>
+                <p class="brand-sub" data-i18n="brandSub">Консьерж Сервис</p>
             </div>
-            <div class="header-ctas">
-                <a href="https://wa.me/905394498607" target="_blank" rel="noopener" class="header-cta" aria-label="WhatsApp">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                </a>
-                <a href="https://t.me/+905394498607" target="_blank" rel="noopener" class="header-cta" aria-label="Telegram">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
-                </a>
+            <div class="header-tools">
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="tool-btn" aria-label="Toggle Dark Mode">
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none;"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                </button>
+                
+                <!-- Language Switcher -->
+                <select id="lang-switcher" class="lang-select">
+                    <option value="ru">RU</option>
+                    <option value="en">EN</option>
+                    <option value="tr">TR</option>
+                </select>
+
+                <div class="header-ctas">
+                    <a href="https://wa.me/905394498607" target="_blank" rel="noopener" class="header-cta" aria-label="WhatsApp">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    </a>
+                    <a href="https://t.me/+905394498607" target="_blank" rel="noopener" class="header-cta" aria-label="Telegram">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
@@ -38,20 +60,23 @@
 
         <!-- ══ HERO ══ -->
         <section class="hero">
+            <div class="hero-bg">
+                <img src="assets/hero.webp" alt="Bodrum Elite" loading="eager">
+            </div>
             <div class="container hero-inner">
                 <div class="hero-left">
                     <span class="gold-dot"></span>
-                    <h2 class="hero-title">Бодрум</h2>
+                    <h2 class="hero-title" data-i18n="heroTitle">Бодрум</h2>
                 </div>
                 <div class="hero-divider"></div>
-                <p class="hero-desc">Эксклюзивный доступ к виллам, ресторанам, яхтам и незабываемым моментам на полуострове.</p>
+                <p class="hero-desc" data-i18n="heroDesc">Эксклюзивный доступ к виллам, ресторанам, яхтам и незабываемым моментам на полуострове.</p>
             </div>
         </section>
 
         <!-- ══ SECTION LABEL ══ -->
         <div class="section-label">
             <span class="label-line"></span>
-            <span class="label-text">КОНСЬЕРЖ УСЛУГИ ЭГЕЙСКОГО ПОБЕРЕЖЬЯ</span>
+            <span class="label-text" data-i18n="servicesLabel">КОНСЬЕРЖ УСЛУГИ ЭГЕЙСКОГО ПОБЕРЕЖЬЯ</span>
             <span class="label-line"></span>
         </div>
 
@@ -61,78 +86,141 @@
                 <div class="services-grid">
 
                     <!-- 1: Transfer -->
-                    <a href="https://t.me/+905394498607?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20VIP-%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%84%D0%B5%D1%80%20%D0%B2%20%D0%91%D0%BE%D0%B4%D1%80%D1%83%D0%BC%D0%B5" target="_blank" rel="noopener" class="card reveal">
+                    <a href="#" class="card reveal open-modal" data-service="transfer">
                         <div class="card-header">
                             <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="18" width="36" height="14" rx="3"/><circle cx="14" cy="34" r="3"/><circle cx="34" cy="34" r="3"/><path d="M12 18V14a2 2 0 012-2h20a2 2 0 012 2v4"/><path d="M6 25h36"/></svg>
-                            <div class="card-label"><span class="gold-dot-sm"></span> ПРИБЫТИЕ И ТРАНСФЕР</div>
+                            <div class="card-label"><span class="gold-dot-sm"></span> <span data-i18n="svcTransfer">ПРИБЫТИЕ И ТРАНСФЕР</span></div>
                         </div>
-                        <div class="card-img"><img src="assets/transfer.png" alt="VIP трансфер Бодрум" loading="lazy"></div>
+                        <div class="card-img"><img src="assets/transfer.webp" alt="VIP Transfer" loading="lazy"></div>
                     </a>
 
                     <!-- 2: Villas -->
-                    <a href="https://t.me/+905394498607?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D0%B0%20%D0%B2%D0%B8%D0%BB%D0%BB%D1%8B%20%D0%B2%20%D0%91%D0%BE%D0%B4%D1%80%D1%83%D0%BC%D0%B5" target="_blank" rel="noopener" class="card reveal">
+                    <a href="#" class="card reveal open-modal" data-service="villa">
                         <div class="card-header">
                             <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 22L24 8l18 14"/><rect x="10" y="22" width="28" height="18" rx="1"/><rect x="19" y="30" width="10" height="10"/><path d="M14 28h4v4h-4z"/><path d="M30 28h4v4h-4z"/></svg>
-                            <div class="card-label"><span class="gold-dot-sm"></span> ВИЛЛЫ И ПРОЖИВАНИЕ</div>
+                            <div class="card-label"><span class="gold-dot-sm"></span> <span data-i18n="svcVilla">ВИЛЛЫ И ПРОЖИВАНИЕ</span></div>
                         </div>
-                        <div class="card-img"><img src="assets/villa.png" alt="Люкс вилла Бодрум" loading="lazy"></div>
+                        <div class="card-img"><img src="assets/villa.webp" alt="Luxury Villa" loading="lazy"></div>
                     </a>
 
                     <!-- 3: Dining -->
-                    <a href="https://t.me/+905394498607?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82%20%D1%80%D0%B5%D1%81%D1%82%D0%BE%D1%80%D0%B0%D0%BD%D1%8B%20%D0%B8%20%D0%B1%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%20%D1%81%D1%82%D0%BE%D0%BB%D0%B8%D0%BA%D0%BE%D0%B2" target="_blank" rel="noopener" class="card reveal">
+                    <a href="#" class="card reveal open-modal" data-service="dining">
                         <div class="card-header">
                             <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 28h32"/><path d="M12 28c0-8 5-14 12-14s12 6 12 14"/><ellipse cx="24" cy="28" rx="16" ry="3"/><path d="M24 14V8"/><circle cx="24" cy="7" r="2"/></svg>
-                            <div class="card-label"><span class="gold-dot-sm"></span> РЕСТОРАНЫ</div>
+                            <div class="card-label"><span class="gold-dot-sm"></span> <span data-i18n="svcDining">РЕСТОРАНЫ</span></div>
                         </div>
-                        <div class="card-img"><img src="assets/dining.png" alt="Ресторан Бодрум" loading="lazy"></div>
+                        <div class="card-img"><img src="assets/dining.webp" alt="Dining" loading="lazy"></div>
                     </a>
 
                     <!-- 4: Beach Clubs -->
-                    <a href="https://t.me/+905394498607?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D1%8E%D1%82%20VIP-%D0%BF%D0%BB%D1%8F%D0%B6%D0%BD%D1%8B%D0%B5%20%D0%BA%D0%BB%D1%83%D0%B1%D1%8B" target="_blank" rel="noopener" class="card reveal">
+                    <a href="#" class="card reveal open-modal" data-service="beach">
                         <div class="card-header">
                             <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M24 6v30"/><path d="M8 18c4-8 12-12 16-12s12 4 16 12"/><path d="M12 36h24"/><path d="M16 36l-4 6"/><path d="M32 36l4 6"/></svg>
-                            <div class="card-label"><span class="gold-dot-sm"></span> ПЛЯЖНЫЕ КЛУБЫ</div>
+                            <div class="card-label"><span class="gold-dot-sm"></span> <span data-i18n="svcBeach">ПЛЯЖНЫЕ КЛУБЫ</span></div>
                         </div>
-                        <div class="card-img"><img src="assets/beach.png" alt="Пляжный клуб Бодрум" loading="lazy"></div>
+                        <div class="card-img"><img src="assets/beach.webp" alt="Beach Clubs" loading="lazy"></div>
                     </a>
 
                     <!-- 5: Yachts -->
-                    <a href="https://t.me/+905394498607?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D0%B0%20%D1%8F%D1%85%D1%82%D1%8B" target="_blank" rel="noopener" class="card reveal">
+                    <a href="#" class="card reveal open-modal" data-service="yacht">
                         <div class="card-header">
                             <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 32c4 4 12 4 20 0s16-4 20 0"/><path d="M10 32l2-14h24l2 14"/><path d="M24 18V6"/><path d="M24 6l12 8"/><path d="M24 10l8 5"/></svg>
-                            <div class="card-label"><span class="gold-dot-sm"></span> ЯХТЫ</div>
+                            <div class="card-label"><span class="gold-dot-sm"></span> <span data-i18n="svcYacht">ЯХТЫ</span></div>
                         </div>
-                        <div class="card-img"><img src="assets/yacht.png" alt="Яхта Бодрум" loading="lazy"></div>
+                        <div class="card-img"><img src="assets/yacht.webp" alt="Yachts" loading="lazy"></div>
                     </a>
 
                     <!-- 6: Nightlife -->
-                    <a href="https://t.me/+905394498607?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BD%D0%BE%D1%87%D0%BD%D0%B0%D1%8F%20%D0%B6%D0%B8%D0%B7%D0%BD%D1%8C%20%D0%B8%20VIP-%D0%BA%D0%BB%D1%83%D0%B1%D1%8B" target="_blank" rel="noopener" class="card reveal">
+                    <a href="#" class="card reveal open-modal" data-service="nightlife">
                         <div class="card-header">
                             <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="24" r="16"/><path d="M24 8v4"/><path d="M24 36v4"/><path d="M8 24h4"/><path d="M36 24h4"/><path d="M12.7 12.7l2.8 2.8"/><path d="M32.5 32.5l2.8 2.8"/><path d="M12.7 35.3l2.8-2.8"/><path d="M32.5 15.5l2.8-2.8"/><circle cx="24" cy="24" r="6"/></svg>
-                            <div class="card-label"><span class="gold-dot-sm"></span> НОЧНАЯ ЖИЗНЬ</div>
+                            <div class="card-label"><span class="gold-dot-sm"></span> <span data-i18n="svcNightlife">НОЧНАЯ ЖИЗНЬ</span></div>
                         </div>
-                        <div class="card-img"><img src="assets/nightlife.png" alt="Ночная жизнь Бодрум" loading="lazy"></div>
+                        <div class="card-img"><img src="assets/nightlife.webp" alt="Nightlife" loading="lazy"></div>
                     </a>
 
                     <!-- 7: Private Assistance -->
-                    <a href="https://t.me/+905394498607?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D0%BB%D0%B8%D1%87%D0%BD%D1%8B%D0%B9%20%D0%B0%D1%81%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BD%D1%82%2024/7" target="_blank" rel="noopener" class="card reveal">
+                    <a href="#" class="card reveal open-modal" data-service="assistant">
                         <div class="card-header">
                             <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="24" cy="14" r="8"/><path d="M8 40c0-8 7-14 16-14s16 6 16 14"/></svg>
-                            <div class="card-label"><span class="gold-dot-sm"></span> ЛИЧНЫЙ АССИСТЕНТ</div>
+                            <div class="card-label"><span class="gold-dot-sm"></span> <span data-i18n="svcAssistant">ЛИЧНЫЙ АССИСТЕНТ</span></div>
                         </div>
-                        <div class="card-img"><img src="assets/assistant.png" alt="Личный ассистент" loading="lazy"></div>
+                        <div class="card-img"><img src="assets/assistant.webp" alt="Assistant" loading="lazy"></div>
                     </a>
 
                     <!-- 8: Private Jet -->
-                    <a href="https://t.me/+905394498607?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5!%20%D0%98%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D1%83%D0%B5%D1%82%20%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B0%D1%8F%20%D0%B0%D0%B2%D0%B8%D0%B0%D1%86%D0%B8%D1%8F" target="_blank" rel="noopener" class="card reveal">
+                    <a href="#" class="card reveal open-modal" data-service="jet">
                         <div class="card-header">
                             <svg class="card-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 26l16-4 4-14 4 14 16 4-16 4-4 14-4-14z"/><circle cx="24" cy="26" r="3"/></svg>
-                            <div class="card-label"><span class="gold-dot-sm"></span> ЧАСТНАЯ АВИАЦИЯ</div>
+                            <div class="card-label"><span class="gold-dot-sm"></span> <span data-i18n="svcJet">ЧАСТНАЯ АВИАЦИЯ</span></div>
                         </div>
-                        <div class="card-img"><img src="assets/jet.png" alt="Частный самолёт" loading="lazy"></div>
+                        <div class="card-img"><img src="assets/jet.webp" alt="Jet" loading="lazy"></div>
                     </a>
 
                 </div>
+            </div>
+        </section>
+
+        <!-- ══ TESTIMONIALS ══ -->
+        <section class="testimonials" id="testimonials">
+            <div class="container">
+                <div class="section-label">
+                    <span class="label-line"></span>
+                    <span class="label-text" data-i18n="testimonialsTitle">ОТЗЫВЫ КЛИЕНТОВ</span>
+                    <span class="label-line"></span>
+                </div>
+                <div class="testimonials-scroll reveal">
+                    <div class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote" data-i18n="testi1">"Невероятный уровень сервиса. Вилла превзошла все ожидания, а ассистент был доступен 24/7."</p>
+                        <p class="author">— Alexander V.</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote" data-i18n="testi2">"Организовали яхту за 3 часа в пик сезона. Настоящие профессионалы своего дела."</p>
+                        <p class="author">— Maria K.</p>
+                    </div>
+                    <div class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote" data-i18n="testi3">"VIP трансфер и лучшие столики в ресторанах без очередей. Лучший консьерж в Бодруме."</p>
+                        <p class="author">— Dmitry S.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ FAQ ══ -->
+        <section class="faq-section" id="faq">
+            <div class="container">
+                <div class="section-label">
+                    <span class="label-line"></span>
+                    <span class="label-text">FAQ</span>
+                    <span class="label-line"></span>
+                </div>
+                <div class="faq-container reveal">
+                    <details class="faq-item">
+                        <summary data-i18n="faq1Q">Как быстро вы можете организовать трансфер?</summary>
+                        <p data-i18n="faq1A">Обычно мы можем подать VIP-автомобиль в аэропорт в течение 1 часа. Однако в высокий сезон мы рекомендуем бронировать минимум за 24 часа.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary data-i18n="faq2Q">Нужна ли предоплата для аренды виллы?</summary>
+                        <p data-i18n="faq2A">Да, для подтверждения бронирования виллы или яхты требуется депозит. Оплату можно произвести переводом, картой или криптовалютой.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary data-i18n="faq3Q">Вы работаете только в Бодруме?</summary>
+                        <p data-i18n="faq3A">Наш основной фокус — полуостров Бодрум. Однако мы также организуем чартеры яхт и перелеты по всему Эгейскому побережью и на греческие острова.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- ══ INSTAGRAM FEED ══ -->
+        <section class="ig-feed reveal">
+            <div class="ig-grid">
+                <a href="#" class="ig-item"><img src="assets/villa.webp" alt="IG 1" loading="lazy"><div class="ig-overlay"><svg viewBox="0 0 24 24" width="24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div></a>
+                <a href="#" class="ig-item"><img src="assets/yacht.webp" alt="IG 2" loading="lazy"><div class="ig-overlay"><svg viewBox="0 0 24 24" width="24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div></a>
+                <a href="#" class="ig-item"><img src="assets/dining.webp" alt="IG 3" loading="lazy"><div class="ig-overlay"><svg viewBox="0 0 24 24" width="24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div></a>
+                <a href="#" class="ig-item"><img src="assets/transfer.webp" alt="IG 4" loading="lazy"><div class="ig-overlay"><svg viewBox="0 0 24 24" width="24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></div></a>
             </div>
         </section>
 
@@ -149,7 +237,7 @@
                     <a href="https://bodrum-elite-concierge.surge.sh" class="footer-link">bodrumelite.com</a>
                 </div>
                 <div class="footer-line"></div>
-                <p class="footer-tagline">МЕСТНЫЕ ЗНАНИЯ. ПРОВЕРЕННЫЙ ДОСТУП. ПРОДУМАННЫЙ ОТДЫХ.</p>
+                <p class="footer-tagline" data-i18n="footerTagline">МЕСТНЫЕ ЗНАНИЯ. ПРОВЕРЕННЫЙ ДОСТУП. ПРОДУМАННЫЙ ОТДЫХ.</p>
             </div>
         </footer>
 
@@ -157,16 +245,41 @@
 
     <!-- ══ FLOATING CONTACT FAB ══ -->
     <div class="fab-container">
-        <a href="https://wa.me/905394498607" target="_blank" rel="noopener" class="fab" aria-label="Написать в WhatsApp">
+        <a href="https://wa.me/905394498607" target="_blank" rel="noopener" class="fab" aria-label="WhatsApp">
             <span class="fab-ping"></span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
             <span class="fab-text">WhatsApp</span>
         </a>
-        <a href="https://t.me/+905394498607" target="_blank" rel="noopener" class="fab" aria-label="Написать в Telegram">
+        <a href="https://t.me/+905394498607" target="_blank" rel="noopener" class="fab" aria-label="Telegram">
             <span class="fab-ping"></span>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
             <span class="fab-text">Telegram</span>
         </a>
+    </div>
+
+    <!-- ══ MODAL CONTAINER ══ -->
+    <div id="service-modal" class="modal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close Modal">&times;</button>
+            <div class="modal-image-wrapper">
+                <img id="modal-img" src="" alt="Service Image">
+            </div>
+            <div class="modal-body">
+                <h3 id="modal-title" class="modal-title"></h3>
+                <p id="modal-desc" class="modal-desc"></p>
+                <div class="modal-actions">
+                    <a id="modal-wa" href="#" target="_blank" rel="noopener" class="modal-btn modal-btn-wa">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                        <span data-i18n="bookWA">WhatsApp</span>
+                    </a>
+                    <a id="modal-tg" href="#" target="_blank" rel="noopener" class="modal-btn modal-btn-tg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.479.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+                        <span data-i18n="bookTG">Telegram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="app.js"></script>
